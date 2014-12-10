@@ -15,11 +15,13 @@ module Ruboty
 
           begin
             pr_id, links = create_pull_request
+            message.reply("nothing to merge.") and return if pr_id.nil?
             merge_message = build_merge_message(links["commits"]["href"])
             merge_pull_request(links["merge"]["href"], pr_id, merge_message)
+            
             message.reply("Successfully merged.\n\n" + merge_message)
-          rescue
-            message.reply("Failed to merge.")
+          rescue => e
+            message.reply("Failed to merge. #{e}")
           end
         end
 

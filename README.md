@@ -26,12 +26,6 @@ botname bb-br-merge master release myaccount/myrepo
 |BITBUCKET_PASSWORD|your Bitbucket password|
 |BITBUCKET_EMAIL|your Bitbucket e-mail|
 
-## Dependency
-
-|Name|Description|
-|:--|:--|
-|||
-
 ## Contributing
 
 1. Fork it ( https://github.com/xoyip/ruboty-bitbucket_merge/fork )
